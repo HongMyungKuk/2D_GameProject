@@ -12,3 +12,8 @@ public:\
 private:\
 	type();\
 	~type();
+
+
+#define DT CTimeMgr::GetInst()->GetDeltaTime()
+#define fDT CTimeMgr::GetInst()->GetFDeltaTime()
+

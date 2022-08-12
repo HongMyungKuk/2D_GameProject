@@ -20,6 +20,12 @@
     <Filter Include="Engine\Header">
       <UniqueIdentifier>{fd39639d-88c2-4bb9-bf51-f49a750b77d0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Manager">
+      <UniqueIdentifier>{3fd13e00-88ae-42e0-a5a0-225dfd83756c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Manager\TimeMgr">
+      <UniqueIdentifier>{860c03ec-73bd-45a4-b4ba-0d26af0b45e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -46,6 +52,9 @@
     <ClInclude Include="struct.h">
       <Filter>Engine\Header</Filter>
     </ClInclude>
+    <ClInclude Include="CTimeMgr.h">
+      <Filter>Engine\Manager\TimeMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="CCore.cpp">
       <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeMgr.cpp">
+      <Filter>Engine\Manager\TimeMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

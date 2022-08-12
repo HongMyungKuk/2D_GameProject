@@ -4,10 +4,14 @@ class CCore
 {
 	SINGLE(CCore);
 private:
-	HWND	m_hWnd;
-	HDC     m_hdc;
-	Vec2    m_vResolution;
+	HWND		m_hWnd;
+	HDC			m_hdc;
+	HDC			m_hMemdc;
+	HBITMAP		m_hBitmap;
+	Vec2		m_vResolution;
 
+public:
+	HWND GetMainWnd() const { return m_hWnd; }
 
 public:
 	int init(HWND _hWnd, POINT _ptResolution);
