@@ -2,6 +2,7 @@
 #include "CCore.h"
 
 #include "CTimeMgr.h"
+#include "CSceneMgr.h"
 
 Vec2 vPos = { 1280.f / 2.f, 800.f / 2.f };
 Vec2 vScale = { 100.f, 100.f };
@@ -31,7 +32,7 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 	m_hWnd = _hWnd;
 	m_vResolution = _ptResolution;
 
-	// DC 
+	// DC (Double Buffering)
 	m_hdc = GetDC(_hWnd);
 	m_hBitmap = CreateCompatibleBitmap(m_hdc, _ptResolution.x, _ptResolution.y);
 	m_hMemdc = CreateCompatibleDC(m_hdc);
@@ -46,52 +47,36 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 	SetWindowPos(m_hWnd, nullptr, 100, 100, rt.right - rt.left, rt.bottom - rt.top, 0);
 
 	CTimeMgr::GetInst()->init();
+	CSceneMgr::GetInst()->init();
 
 	return S_OK;
 }
 
 void CCore::progress()
 {
-	// update
+	//====================
+	//=====  update  =====
+	//====================
+
 	CTimeMgr::GetInst()->update();
+	CSceneMgr::GetInst()->update();
 
-	if (GetAsyncKeyState(VK_UP) & 0x8000)
-	{
-		vPos.y -= 100.f * fDT;
-	}
 
-	if (GetAsyncKeyState(VK_DOWN) & 0x8000)
-	{
-		vPos.y += 100.f * fDT;
-	}
 
-	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-	{
-		vPos.x -= 100.f * fDT;
-	}
 
-	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-	{
-		vPos.x += 100.f * fDT;
-	}
 
-	// render
 
-	Rectangle(m_hMemdc, -1, -1, m_vResolution.x + 1, m_vResolution.y + 1);
 
-	Rectangle(m_hMemdc
-		, int(vPos.x - vScale.x / 2.f)
-		, int(vPos.y - vScale.y / 2.f)
-		, int(vPos.x + vScale.x / 2.f)
-		, int(vPos.y + vScale.y / 2.f));
+	//=====================
+	//===== rendering =====
+	//=====================
 
-	BitBlt(m_hdc
-		, 0, 0
-		, (int)m_vResolution.x
-		, (int)m_vResolution.y
-		, m_hMemdc
-		, 0, 0
-		, SRCCOPY);
+
+	Rectangle(m_hMemdc, -1, -1, (int)m_vResolution.x + 1, (int)m_vResolution.y + 1);
+
+	CSceneMgr::GetInst()->render(m_hMemdc);
+
+	BitBlt(m_hdc, 0, 0, (int)m_vResolution.x, (int)m_vResolution.y, m_hMemdc, 0, 0, SRCCOPY);
 
 	CTimeMgr::GetInst()->render();
 }

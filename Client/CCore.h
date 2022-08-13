@@ -12,6 +12,7 @@ private:
 
 public:
 	HWND GetMainWnd() const { return m_hWnd; }
+	Vec2 GetResolution() const { return m_vResolution; }
 
 public:
 	int init(HWND _hWnd, POINT _ptResolution);

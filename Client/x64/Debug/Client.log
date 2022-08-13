@@ -1,4 +1,4 @@
 ﻿  CCore.cpp
-C:\Users\skdfw\OneDrive\바탕 화면\git\2D_GameProject\Client\CCore.cpp(80,67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\skdfw\OneDrive\바탕 화면\git\2D_GameProject\Client\CCore.cpp(80,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  CObject.cpp
+  Generating Code...
   Client.vcxproj -> C:\Users\skdfw\OneDrive\바탕 화면\git\2D_GameProject\x64\Debug\Client.exe

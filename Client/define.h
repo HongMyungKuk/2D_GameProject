@@ -1,7 +1,6 @@
 #pragma once
 
 // Sington
-
 #define SINGLE(type)\
 public:\
 	static type* GetInst()\
@@ -14,6 +13,29 @@ private:\
 	~type();
 
 
+
+
+// Comfortable
 #define DT CTimeMgr::GetInst()->GetDeltaTime()
 #define fDT CTimeMgr::GetInst()->GetFDeltaTime()
+
+
+
+// Type
+enum class GROUP_TYPE
+{
+	PLAYER,
+	MONSTER,
+	MISSILE,
+
+	END
+};
+
+enum class SCENE_TYPE
+{
+	TOOL_SCENE,
+	START_SCENE,
+
+	END
+};
 
