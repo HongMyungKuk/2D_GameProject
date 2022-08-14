@@ -15,6 +15,3 @@ void CMonster::update()
 {
 }
 
-void CMonster::render(HDC _hdc)
-{
-}

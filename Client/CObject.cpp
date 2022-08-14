@@ -32,6 +32,11 @@ void CObject::final_update()
 
 void CObject::render(HDC _hdc)
 {
+	Rectangle(_hdc
+		, (int)(m_vPos.x - m_vScale.x / 2.f)
+		, (int)(m_vPos.y - m_vScale.y / 2.f)
+		, (int)(m_vPos.x + m_vScale.x / 2.f)
+		, (int)(m_vPos.y + m_vScale.y / 2.f));
 }
 
 void CObject::component_render(HDC _hdc)

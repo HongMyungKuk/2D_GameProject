@@ -3,6 +3,7 @@
 
 #include "CTimeMgr.h"
 #include "CResMgr.h"
+#include "CKeyMgr.h"
 
 #include "CTexture.h"
 #include "CCollider.h"
@@ -27,24 +28,24 @@ void CPlayer::update()
 {
 	Vec2 vPos = GetPos();
 
-	if (GetAsyncKeyState(VK_UP) & 0x8000)
+	if (KEY_HOLD(KEY::UP))
 	{
-		vPos.y -= 100.f * fDT;
+		vPos.y -= 500.f * fDT;
 	}
 
-	if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+	if (KEY_HOLD(KEY::DOWN))
 	{
-		vPos.y += 100.f * fDT;
+		vPos.y += 500.f * fDT;
 	}
 
-	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+	if (KEY_HOLD(KEY::LEFT))
 	{
-		vPos.x -= 100.f * fDT;
+		vPos.x -= 500.f * fDT;
 	}
 
-	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+	if (KEY_HOLD(KEY::RIGHT))
 	{
-		vPos.x += 100.f * fDT;
+		vPos.x += 500.f * fDT;
 	}
 
 	SetPos(vPos);

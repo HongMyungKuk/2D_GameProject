@@ -4,6 +4,7 @@
 #include "CScene_Tool.h"
 #include "CScene_Start.h"
 
+#include "CCollisionMgr.h"
 
 CSceneMgr::CSceneMgr()
 	: m_pCurScene(nullptr)

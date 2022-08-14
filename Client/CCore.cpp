@@ -4,6 +4,8 @@
 #include "CTimeMgr.h"
 #include "CSceneMgr.h"
 #include "CPathMgr.h"
+#include "CKeyMgr.h"
+#include "CCollisionMgr.h"
 
 
 
@@ -47,7 +49,9 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 
 	CTimeMgr::GetInst()->init();
 	CPathMgr::GetInst()->init();
+	CKeyMgr::GetInst()->init();
 	CSceneMgr::GetInst()->init();
+
 
 	return S_OK;
 }
@@ -59,10 +63,9 @@ void CCore::progress()
 	//====================
 
 	CTimeMgr::GetInst()->update();
+	CKeyMgr::GetInst()->update();
 	CSceneMgr::GetInst()->update();
-
-
-
+	CCollisionMgr::GetInst()->update();
 
 
 

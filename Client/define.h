@@ -15,9 +15,15 @@ private:\
 
 
 
-// Comfortable
+// Time Manager Comfortable define
 #define DT CTimeMgr::GetInst()->GetDeltaTime()
 #define fDT CTimeMgr::GetInst()->GetFDeltaTime()
+
+// Key Manager Comfortable define
+#define KEY(dir, state) CKeyMgr::GetInst()->GetKeyState(dir) == state
+#define KEY_HOLD(dir) KEY(dir, KEY_STATE::HOLD)
+#define KEY_AWAY(dir) KEY(dir, KEY_STATE::AWAY)
+#define KEY_NONE(dir) KEY(dir, KEY_STATE::NONE)
 
 
 
@@ -28,7 +34,7 @@ enum class GROUP_TYPE
 	MONSTER,
 	MISSILE,
 
-	END
+	END = 32
 };
 
 enum class SCENE_TYPE

@@ -24,9 +24,9 @@ void CCollider::final_update()
 void CCollider::render(HDC _hdc)
 {
 	Rectangle(_hdc
-		, m_vFinalPos.x - m_vScale.x / 2.f
-		, m_vFinalPos.y - m_vScale.y / 2.f
-		, m_vFinalPos.x + m_vScale.x / 2.f
-		, m_vFinalPos.y + m_vScale.y / 2.f);
-}
+		, (int)(m_vFinalPos.x - m_vScale.x / 2.f)
+		, (int)(m_vFinalPos.y - m_vScale.y / 2.f)
+		, (int)(m_vFinalPos.x + m_vScale.x / 2.f)
+		, (int)(m_vFinalPos.y + m_vScale.y / 2.f));
+}	
 

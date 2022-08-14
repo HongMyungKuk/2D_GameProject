@@ -59,8 +59,17 @@
     <Filter Include="Engine\5. Object\Monster">
       <UniqueIdentifier>{7cece156-5b0f-4352-88fd-fbc156d79075}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\7. Collider">
+    <Filter Include="Engine\3. Manager\KeyMgr">
+      <UniqueIdentifier>{8c89b8e6-956c-458f-83ee-193f181f8752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\7. Component">
+      <UniqueIdentifier>{06a1d3b6-a0fe-4f47-b43a-a605485d64d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\7. Component\Collider">
       <UniqueIdentifier>{53552c8e-bcd8-4f83-8041-f4725df247dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\3. Manager\CollisionMgr">
+      <UniqueIdentifier>{ce25b49c-33ef-4e8f-82ad-81dca68d9f1e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -128,7 +137,13 @@
       <Filter>Engine\5. Object\Monster</Filter>
     </ClInclude>
     <ClInclude Include="CCollider.h">
-      <Filter>Engine\7. Collider</Filter>
+      <Filter>Engine\7. Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CKeyMgr.h">
+      <Filter>Engine\3. Manager\KeyMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollisionMgr.h">
+      <Filter>Engine\3. Manager\CollisionMgr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -178,7 +193,13 @@
       <Filter>Engine\5. Object\Monster</Filter>
     </ClCompile>
     <ClCompile Include="CCollider.cpp">
-      <Filter>Engine\7. Collider</Filter>
+      <Filter>Engine\7. Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CKeyMgr.cpp">
+      <Filter>Engine\3. Manager\KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollisionMgr.cpp">
+      <Filter>Engine\3. Manager\CollisionMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
