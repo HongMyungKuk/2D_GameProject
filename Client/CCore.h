@@ -12,6 +12,7 @@ private:
 
 public:
 	HWND GetMainWnd() const { return m_hWnd; }
+	HDC GetMainDC() const { return m_hdc; }
 	Vec2 GetResolution() const { return m_vResolution; }
 
 public:

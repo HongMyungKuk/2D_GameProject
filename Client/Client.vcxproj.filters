@@ -41,6 +41,27 @@
     <Filter Include="Engine\4. Scene\Start_Scene">
       <UniqueIdentifier>{445187a2-66fd-44d9-81da-54aacb5fec9c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\5. Object\Player">
+      <UniqueIdentifier>{54b5c28c-3e8d-4fbb-893e-500a9a9f8705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\6. Resource">
+      <UniqueIdentifier>{80f33ce7-a237-4ffe-a470-fcf9b7366274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\3. Manager\ResMgr">
+      <UniqueIdentifier>{94754cb0-b951-499b-9c3c-9bb48d589d8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\6. Resource\Texture">
+      <UniqueIdentifier>{f2890b83-1787-4443-bbcf-67b61cbbf5a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\3. Manager\PathMgr">
+      <UniqueIdentifier>{73a61ea1-f522-426f-94ed-989dbe1aadd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\5. Object\Monster">
+      <UniqueIdentifier>{7cece156-5b0f-4352-88fd-fbc156d79075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\7. Collider">
+      <UniqueIdentifier>{53552c8e-bcd8-4f83-8041-f4725df247dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -88,6 +109,27 @@
     <ClInclude Include="CScene_Start.h">
       <Filter>Engine\4. Scene\Start_Scene</Filter>
     </ClInclude>
+    <ClInclude Include="CRes.h">
+      <Filter>Engine\6. Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CResMgr.h">
+      <Filter>Engine\3. Manager\ResMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>Engine\6. Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="CPathMgr.h">
+      <Filter>Engine\3. Manager\PathMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Engine\5. Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonster.h">
+      <Filter>Engine\5. Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollider.h">
+      <Filter>Engine\7. Collider</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -116,6 +158,27 @@
     </ClCompile>
     <ClCompile Include="CScene_Start.cpp">
       <Filter>Engine\4. Scene\Start_Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CRes.cpp">
+      <Filter>Engine\6. Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CResMgr.cpp">
+      <Filter>Engine\3. Manager\ResMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CPathMgr.cpp">
+      <Filter>Engine\3. Manager\PathMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>Engine\6. Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Engine\5. Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonster.cpp">
+      <Filter>Engine\5. Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollider.cpp">
+      <Filter>Engine\7. Collider</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

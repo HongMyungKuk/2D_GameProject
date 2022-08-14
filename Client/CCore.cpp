@@ -3,9 +3,8 @@
 
 #include "CTimeMgr.h"
 #include "CSceneMgr.h"
+#include "CPathMgr.h"
 
-Vec2 vPos = { 1280.f / 2.f, 800.f / 2.f };
-Vec2 vScale = { 100.f, 100.f };
 
 
 CCore::CCore()
@@ -47,6 +46,7 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 	SetWindowPos(m_hWnd, nullptr, 100, 100, rt.right - rt.left, rt.bottom - rt.top, 0);
 
 	CTimeMgr::GetInst()->init();
+	CPathMgr::GetInst()->init();
 	CSceneMgr::GetInst()->init();
 
 	return S_OK;

@@ -35,7 +35,10 @@ void CSceneMgr::init()
 void CSceneMgr::update()
 {
 	if (m_pCurScene != nullptr)
+	{
 		m_pCurScene->update();
+		m_pCurScene->final_update();
+	}
 }
 
 void CSceneMgr::render(HDC _hdc)

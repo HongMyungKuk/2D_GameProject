@@ -1,2 +1,11 @@
-﻿  CCore.cpp
-  Client.vcxproj -> C:\Users\User\source\repos\2D_Game_Project\Debug\Client.exe
+﻿  pch.cpp
+  CCore.cpp
+  CObject.cpp
+  CScene.cpp
+  CSceneMgr.cpp
+  CScene_Start.cpp
+  CScene_Tool.cpp
+  CTimeMgr.cpp
+  main.cpp
+  Generating Code...
+  Client.vcxproj -> C:\Users\skdfw\OneDrive\바탕 화면\git\2D_GameProject\OutputDebug\Client.exe
