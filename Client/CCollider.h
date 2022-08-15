@@ -34,6 +34,7 @@ public:
 
 public:
 	CCollider();
+	CCollider(const CCollider& _copy);
 	~CCollider();
 
 	friend class CObject;

@@ -27,6 +27,11 @@ void CScene_Start::Enter()
 	pObj->SetScale(Vec2(50.f, 50.f));
 	AddGroupObj(pObj, GROUP_TYPE::PLAYER);
 
+	// Clone
+	//CObject* pObj2  = pObj->Clone();
+	//pObj2->SetPos(Vec2(50.f + 100.f, vResolution.y / 2.f));
+	//AddGroupObj(pObj2, GROUP_TYPE::PLAYER);
+
 
 	// Create Monster
 	pObj = new CMonster;
@@ -34,7 +39,6 @@ void CScene_Start::Enter()
 	pObj->SetPos(Vec2(vResolution.x - 50.f, vResolution.y / 2.f));
 	pObj->SetScale(Vec2(50.f, 50.f));
 	AddGroupObj(pObj, GROUP_TYPE::MONSTER);
-
 
 	// Add Collision 
 	CCollisionMgr::GetInst()->CheckCollision(GROUP_TYPE::PLAYER, GROUP_TYPE::MONSTER);

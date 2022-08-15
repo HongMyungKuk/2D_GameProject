@@ -25,6 +25,8 @@ private:\
 #define KEY_AWAY(dir) KEY(dir, KEY_STATE::AWAY)
 #define KEY_NONE(dir) KEY(dir, KEY_STATE::NONE)
 
+// Clone
+#define CLONE(type) virtual type* Clone() { return new type(*this); }
 
 
 // Type

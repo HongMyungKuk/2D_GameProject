@@ -16,6 +16,16 @@ CCollider::CCollider()
 {
 }
 
+CCollider::CCollider(const CCollider& _copy)
+	: m_pOwner(nullptr)
+	, m_vFinalPos(_copy.m_vFinalPos)
+	, m_vScale(_copy.m_vScale)
+	, m_vOffSet(_copy.m_vOffSet)
+	, m_iID(s_iID++)
+	, m_bFlag(false)
+{
+}
+
 CCollider::~CCollider()
 {
 }

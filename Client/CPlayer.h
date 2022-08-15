@@ -19,6 +19,8 @@ public:
     virtual void update();
     virtual void render(HDC _hdc);
 
+    CLONE(CPlayer);
+
 public:
     CPlayer();
     ~CPlayer();

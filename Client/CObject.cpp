@@ -12,6 +12,18 @@ CObject::CObject()
 {
 }
 
+CObject::CObject(const CObject& _copy)
+	: m_vPos(_copy.m_vPos)
+	, m_vScale(_copy.m_vScale)
+	, m_pCollider(nullptr)
+{
+	if (m_pCollider == nullptr)
+	{
+		m_pCollider = new CCollider(*_copy.m_pCollider);
+		m_pCollider->m_pOwner = this;
+	}
+}
+
 CObject::~CObject()
 {
 	if (m_pCollider != nullptr)

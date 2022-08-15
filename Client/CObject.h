@@ -36,8 +36,11 @@ public:
 	virtual void final_update() final;
 	virtual void render(HDC _hdc);
 
+	virtual CObject* Clone() = 0;
+
 public:
 	CObject();
+	CObject(const CObject& _copy);
 	virtual ~CObject();
 };
 

@@ -13,6 +13,8 @@ public:
 public:
 	virtual void update();
 	virtual void render(HDC _hdc);
+
+	CLONE(CMonster);
 	
 public:
 	CMonster();
