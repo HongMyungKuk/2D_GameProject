@@ -1,4 +1,4 @@
-﻿  CCollisionMgr.cpp
-  CScene_Start.cpp
+﻿  CCollider.cpp
+  CSelectGDI.cpp
   Generating Code...
   Client.vcxproj -> C:\Users\skdfw\OneDrive\바탕 화면\git\2D_GameProject\Output\bin_debug\Client.exe

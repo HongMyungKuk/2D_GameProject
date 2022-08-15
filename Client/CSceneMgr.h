@@ -12,6 +12,9 @@ private:
 	CScene*		m_pCurScene;
 
 public:
+	CScene* GetCurScene() const { return m_pCurScene; }
+
+public:
 	void init();
 	void update();
 	void render(HDC _hdc);

@@ -71,6 +71,12 @@
     <Filter Include="Engine\3. Manager\CollisionMgr">
       <UniqueIdentifier>{ce25b49c-33ef-4e8f-82ad-81dca68d9f1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Module">
+      <UniqueIdentifier>{489b7168-8c71-48ca-b8b4-fe961fe6280d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module\SelectGDI">
+      <UniqueIdentifier>{617f160b-5533-471d-8811-3afd57ac73ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -145,6 +151,9 @@
     <ClInclude Include="CCollisionMgr.h">
       <Filter>Engine\3. Manager\CollisionMgr</Filter>
     </ClInclude>
+    <ClInclude Include="CSelectGDI.h">
+      <Filter>Module\SelectGDI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -200,6 +209,9 @@
     </ClCompile>
     <ClCompile Include="CCollisionMgr.cpp">
       <Filter>Engine\3. Manager\CollisionMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CSelectGDI.cpp">
+      <Filter>Module\SelectGDI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

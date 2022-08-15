@@ -25,8 +25,12 @@ CCore::~CCore()
 	DeleteObject(m_hBitmap);
 	DeleteDC(m_hMemdc);
 
-
+	for (int i = 0; i < (int)PEN_TYPE::END; ++i)
+	{
+		DeleteObject(m_arrPen[i]);
+	}
 }
+
 
 int CCore::init(HWND _hWnd, POINT _ptResolution)
 {
@@ -46,6 +50,12 @@ int CCore::init(HWND _hWnd, POINT _ptResolution)
 
 	AdjustWindowRect(&rt, WS_OVERLAPPEDWINDOW, false);
 	SetWindowPos(m_hWnd, nullptr, 100, 100, rt.right - rt.left, rt.bottom - rt.top, 0);
+
+
+
+
+
+	CreatePenBrush();
 
 	CTimeMgr::GetInst()->init();
 	CPathMgr::GetInst()->init();
@@ -82,4 +92,17 @@ void CCore::progress()
 	BitBlt(m_hdc, 0, 0, (int)m_vResolution.x, (int)m_vResolution.y, m_hMemdc, 0, 0, SRCCOPY);
 
 	CTimeMgr::GetInst()->render();
+}
+
+void CCore::CreatePenBrush()
+{
+	// Create Brush
+	m_arrBrush[(UINT)BRUSH_TYPE::HOLLOW] = (HBRUSH)GetStockObject(HOLLOW_BRUSH);
+	m_arrBrush[(UINT)BRUSH_TYPE::WHITE] = (HBRUSH)GetStockObject(WHITE_BRUSH);
+	m_arrBrush[(UINT)BRUSH_TYPE::BLACK] = (HBRUSH)GetStockObject(BLACK_BRUSH);
+
+	// Create Pen
+	m_arrPen[(UINT)PEN_TYPE::RED] = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+	m_arrPen[(UINT)PEN_TYPE::GREEN] = CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
+	m_arrPen[(UINT)PEN_TYPE::BLUE] = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
 }

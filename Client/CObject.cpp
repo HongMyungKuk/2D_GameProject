@@ -56,5 +56,17 @@ void CObject::CreateCollider()
 	}
 }
 
+void CObject::OnCollisionEnter(CCollider* _pOther)
+{
+}
+
+void CObject::OnCollision(CCollider* _pOther)
+{
+}
+
+void CObject::OnCollisonExit(CCollider* _pOther)
+{
+}
+
 
 

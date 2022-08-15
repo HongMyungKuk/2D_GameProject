@@ -73,3 +73,15 @@ void CPlayer::render(HDC _hdc)
 		, (int)vSlice.x, (int)vSlice.y
 		, RGB(38, 123, 218));
 }
+
+void CPlayer::OnCollisionEnter(CCollider* _pOther)
+{
+}
+
+void CPlayer::OnCollision(CCollider* _pOther)
+{
+}
+
+void CPlayer::OnCollisonExit(CCollider* _pOther)
+{
+}
